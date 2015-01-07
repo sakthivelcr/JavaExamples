@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class first {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set s=new HashSet<String>();
+		s.add("apple");
+		s.add("oranges");
+	
+		Set s1=new HashSet<String>(s);
+		s1.add("bananas");
+		s.addAll(s1);
+		//for(Object a:s)
+		//{
+			//System.out.println(a);
+		//}
+		iterate(s);
+		Object[] o=s.toArray();
+		
+		System.out.println(s.size());
+		//System.out.println(s1.contains("baby"));
+		}
+	public static void iterate(Collection<?> c)
+	{
+		//for(Iterator i=c.iterator();i.hasNext();)
+		//{
+			//System.out.println(i.next());
+		//}
+		Iterator<?> i=c.iterator();
+		while(i.hasNext())
+		{
+			System.out.println(i.next());
+		}
+		
+	}
+
+}
