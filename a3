@@ -1,0 +1,31 @@
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+public class fourth {
+	String s="hi";
+	public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+		// TODO Auto-generated method stub
+		//ArrayList<Integer> al=new ArrayList<>();
+		fourth fa=new fourth();
+		int iq=2;
+		 
+		int[] f=new int[4];
+		Class c1=f.getClass();
+		System.out.println(c1);
+		System.out.println(f.getClass().getName());
+		Class c2=c1.getComponentType();
+		System.out.println(c2);
+		System.out.println(c2.getName());
+		Class c3=Class.forName("idecide.fourth");
+		System.out.println(c3);
+		Class c4=fourth.class;
+		System.out.println(c4);
+		Class c5=java.util.Date.class;
+		Field fi=fa.getClass().getDeclaredField("s");
+		
+		fi.setAccessible(true);
+		System.out.println(fi.get(fa));
+		
+	}
+
+}
