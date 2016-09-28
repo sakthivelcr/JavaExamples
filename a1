@@ -6,7 +6,7 @@ public class second {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	List<String> l=new ArrayList<String>();
-	//Hashtable h=new Hashtable<String,String>();
+	Hashtable h=new Hashtable<String,String>();
 	l.add("hello");
 	l.add("how");
 	/*for(String s:l)
