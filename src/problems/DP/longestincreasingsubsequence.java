@@ -9,6 +9,7 @@ import java.util.Scanner;
  * 
  * Input:11 3 4 -1 5 8 2 3 12 7 9 10
  * Output:6
+ LIS: -1 2 3 7 9 10
  */
 public class longestincreasingsubsequence {
 
