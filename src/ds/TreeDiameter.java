@@ -4,17 +4,32 @@ import java.util.ArrayList;
 
 
 public class TreeDiameter {
-
+	class Node
+	{
+		public int value;
+		public Node left;
+		public Node right;
+		
+		Node()
+		{
+			
+		}
+		Node(int i)
+		{
+			this.value=i;
+		}
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Node node=new Node(1);
-		node.left = new Node(2);
-		node.right = new Node(3);
-		node.left.left = new Node(4);
-		node.left.right = new Node(5);
-		node.left.right.left = new Node(6);
-		node.left.right.left.right = new Node(7);
-		node.left.left.left = new Node(8);
+		TreeDiameter outerobj=new TreeDiameter();
+		Node node=outerobj.new Node(1);
+		node.left =outerobj.new Node(2);
+		node.right = outerobj.new Node(3);
+		node.left.left = outerobj.new Node(4);
+		node.left.right = outerobj.new Node(5);
+		node.left.right.left = outerobj.new Node(6);
+		node.left.right.left.right = outerobj.new Node(7);
+		node.left.left.left = outerobj.new Node(8);
 		System.out.println(findDiameter(node));
 		System.out.println(findDiameter2(node).get(1));
 		
@@ -57,19 +72,5 @@ public class TreeDiameter {
 	}
 
 }
-/*class Node
-{
-	public int value;
-	public Node left;
-	public Node right;
-	
-	Node()
-	{
-		
-	}
-	Node(int i)
-	{
-		this.value=i;
-	}
-}*/
+
 
